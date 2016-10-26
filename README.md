@@ -1,0 +1,2 @@
+# glifos
+explicando los glifos
