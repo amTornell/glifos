@@ -1,0 +1,76 @@
+
+
+ol.list{
+  padding-top: 10px;
+  li{
+    padding-bottom: 25px;
+  }
+  li:last-child{
+    padding-bottom: 0;
+  }
+  .icon{
+    width: 50px;
+    float: left;
+    padding-right: 10px;
+  }
+  @include bp-small {
+    font-size: 0.8rem;
+  }
+}
+
+strong{
+  font-family: $font-medium;
+}
+
+.alert-normal{
+  background: $acent;
+  color: $white;
+  text-align: center;
+}
+
+#influencers{
+  picture{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    border: 6px solid $acent;
+    img{
+      width: 100%;
+    }
+  }
+  h2{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+    @include bp-small {
+      padding-bottom: 10px;
+    }
+    
+  }
+  li{
+    padding-bottom: 20px;
+  }
+  p{
+    padding-bottom: 20px;
+  }
+  .social{
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+    li{ 
+      display: inline-block;
+      padding: 10px 1px;
+    }
+    a{
+      display: block;
+      img{
+        border-radius: 50%;
+        border: 1px solid $white;
+      }
+    }
+  }
+
+}

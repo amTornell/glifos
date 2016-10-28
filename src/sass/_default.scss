@@ -1,0 +1,680 @@
+body{
+	font-family: $font-base;
+	//font-family: "Neue Haas Unica W01 Regular";
+    background: $blue-dark;
+    color: $white;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.46;
+  	background: $blue-dark ; 
+}
+
+html {
+  height: 100%;
+}
+
+
+a{
+	text-decoration: none;
+	color: $white;
+	&:hover{
+		color: $acento;
+	}
+}
+
+.left{
+	float: left;
+}
+.contenedor-center {
+  /*  display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+    */
+}
+
+#the-wrapper{
+	min-height:100%;
+	position:relative;
+	overflow: hidden;
+	z-index: 10;
+}
+
+.row{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.responsive-image{
+	width: 100%;
+}
+.super-image{
+	padding: 20px 0;
+}
+.float-right{
+	float: right;
+}
+.text-centered{
+	text-align: center;
+}
+/*****************
+	header
+
+******************/
+
+header{
+	width: 100%;
+	position: relative;
+	min-height: 100px;
+	margin-top: 20px;
+	background: url('../../images/simulador_menu01.png') no-repeat top center;
+	@include bp-small {
+		background: $blue-dark;
+    }
+    .languages{
+    	width: 80px;
+    	position: absolute;
+    	top: 1px;
+    	right: 2px;
+    	li{
+    		display: inline-block;
+    		border-top: 3px solid $blue-dark;
+    		font-size: 18px;
+    		a{
+    			font-family: $font-thin;
+    			&:hover{
+    				text-decoration: none;
+    			}
+    		}
+    	}
+    	li.active{
+			border-color: $acento;
+    	}
+    	@include bp-small {
+    		position: relative;
+    		margin: 0 auto;
+    		width: 66px;
+    		li{
+    			font-size: 13px;
+    		}
+   		}
+    }
+}
+
+small{
+	font-size: 70%;
+}
+.menu{
+	height: 76px;
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+  	background-image:url('../../images/simulador_menu02.png');
+  	background-repeat: no-repeat;
+  	background-position:  bottom center;
+	ul{
+		position: relative;
+		width: 700px;
+		display: block;
+		background:url('../../images/mayan_menu.png') no-repeat center top;
+		height: 40px;
+		margin: 30px auto 0;
+	}
+	li{
+		display: block;
+		float: left;
+		width: 25%;
+		height: 40px;
+		line-height: 35px;
+		a{
+			display: block;
+			width: 100%;
+			line-height: 35px;
+			text-align: center;
+			font-family: $font-regular;
+			text-shadow: 1px 1px 1px $cafe;
+			&:hover{
+				text-decoration: none;
+				color: $white;
+			}
+		}
+	}
+	li.profile{
+		span{
+			float: left;
+			.points{
+				font-family: $font-thin;
+				color: $acento;
+			}
+		}
+		a{
+			float: left;
+			width: 100%;
+		}
+		.logout{
+			text-transform: uppercase;
+			font-size: 11px;
+			background: $acento;
+			border: 3px;
+			padding: 0px 5px;
+			height: 20px;
+			line-height: 20px;
+			width: 70px;
+			text-shadow: none;
+			font-family: $font-medium;
+		}
+	}
+	
+}
+
+.profile-mobile{
+	position: absolute;
+	right: 5px;
+	top:60px;
+	width: 140px;
+	display: none;
+	@include bp-small {
+		display: block;
+	}
+		span{
+			float: left;
+			.points{
+				font-family: $font-thin;
+				color: $acento;
+			}
+		}
+		a{
+			float: left;
+			width: 100%;
+		}
+		.logout{
+			text-transform: uppercase;
+			font-size: 11px;
+			background: $acento;
+			border: 3px;
+			padding: 0px 5px;
+			height: 20px;
+			line-height: 20px;
+			width: 70px;
+			text-shadow: none;
+			font-family: $font-medium;
+			display: block;
+			text-align: center;
+			&:hover{
+
+			}
+		}
+	}
+.logo{
+		position: relative;
+		margin: 0px auto 0;
+		display: block;
+		max-width:400px;
+		img{
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+		@media screen and (min-width:300px) and (max-width: 800px){
+		 max-width:290px;
+		}
+
+		 @include bp-small {
+		 //	width: 300px;
+		 //	padding-top: 10px;
+		 }
+}
+
+/*******************************************
+		menu mobile
+
+**********************************************/
+
+/****** nav ******/
+#nav-trigger {
+  display: none;
+  text-align: center; 
+  clear: both;
+  margin-top: 5px;
+  float: left;	
+  position: relative;
+  z-index: 20;	
+
+
+	span {
+	    display: block;
+	    background-color: none;		
+	    color: white;
+	    cursor: pointer;
+	    text-transform: uppercase;
+	    clear: both;
+	    margin: 0;
+	    margin-left: 5px;
+	   	font-size: 18px;
+		letter-spacing: 1px;
+		border: 3px solid $white;
+	    border-radius: 50%;
+		width: 45px;
+  		height: 45px;
+		line-height: 40px;
+	
+		&:hover {
+      	//background-color:  $blue-dark; 
+      	}
+      
+      	
+	  }
+	span:after {
+	
+  	}
+  	span.open:after {
+
+  	}
+
+}
+ 
+nav#nav-mobile {
+  position: relative;
+  display: none; 
+  clear: both;
+  z-index: 10;
+  width: 300px;
+  top: -22px;
+  z-index: 10;
+	 ul {
+	    display: none;
+	    list-style-type: none;
+	    position: relative;
+	    left: 0;
+	    right: 0;
+	    margin-left: auto;
+	    margin-right: auto;
+	    text-align: center;
+	    width: 80%;
+	    height: 200px;
+	    padding-top: 20px;
+		li {
+			    display: block;
+			    padding: 2px 0;
+			    margin: 0 2px;
+			    border-bottom: solid 1px $acento;
+			    border-top: solid 1px $blue-medium;
+		}
+		li:first-child{
+			border-top: none;
+		}
+		li:last-child {
+	    	  border-bottom: none; 
+	    }
+	     a {
+		    display: block;
+		    color: $white;
+		    padding: 5px; 
+		    font-size: 15px;
+		    font-family: $font-regular;
+			&:hover{
+				color: #fff; 
+				text-decoration: none;
+			}
+		}
+		li.logo{
+			display: none;
+		}
+	}// ul
+}
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media all and (max-width: 1120px) {
+  #nav-trigger {
+    display: block; }
+
+  nav#nav-main {
+     display: none; 
+ }
+
+  nav#nav-mobile {
+    display: block; 
+  }
+  .profile-mobile{
+	display: block;
+  }
+}
+
+
+
+
+
+
+/****************
+user
+
+***********************************************/
+.user{
+	position: absolute;
+	right: 20px;
+	top: -50px;
+	width: 150px;
+	z-index: 50;
+	a{
+		padding-top: 10px;
+		display: block;
+		&:hover{
+			color: $white;
+			text-decoration: none;
+		}
+	}
+	p{
+		position: relative;
+	}
+	.avatar{
+		border-radius: 50%;
+		height: 100px;
+		width: 100px;
+		display: block;
+		overflow: hidden;
+		border: 3px solid $acento;
+		margin: 0 auto;
+		img{
+			width: 100%;
+		}
+	}
+
+	.points{
+		font-size: $font-size-base;
+		font-weight: bold;
+		position: absolute;
+		top: 5px;
+		left: 100px;
+		padding: 2px;
+		background: $acento;
+		border-radius: 3px;
+	}
+
+
+	.btn-main{
+		width: 100%;
+		min-width: 100%;
+	}
+	@include bp-medium {
+   		//width: 100%;
+   		//width: 100px;
+   		top: 0px;
+   		.avatar{
+   			width: 80px;
+   			height: 80px;
+   		}
+  	}
+}
+
+.user-points-content{
+		text-align: center;
+		height: 30px;
+		border-radius: 5px;
+		border: 3px solid $acento;
+		margin-top: -10px;
+		.points, button{
+			width: 50%;
+			display: block;
+			float: left;
+			text-transform: uppercase;
+			height: 24px;
+			line-height: 24px;
+			background: none;
+			padding: 0;
+			border: 0;
+		}
+		.points{
+			background: $white;
+			color: $acent;
+		}
+}
+
+.container-center{
+	margin: 0 auto;
+	padding-bottom: 420px;
+	background: $blue-dark url('../../images/simulador_footer.png') no-repeat bottom center / 100% auto ; 
+	@include bp-small{
+    padding-bottom: 180px;
+    }
+
+}
+
+.item-centered{
+	display: block;
+	margin: 0 auto;
+	float: none;
+}
+
+/*****************************
+
+		TEXTOS
+
+******************************/
+
+.main-title{
+	margin: 10px 0;
+	text-align: center;
+	font-family: $font-thin;
+	span{
+		color: $acento;
+	}
+}
+
+.text-centered{
+	text-align: center;
+}
+
+p{
+	@include bp-small {
+      font-size: 13px;
+    }
+
+}
+
+h1{
+	font-size: 24px;
+	font-family: $font-medium;
+	@include bp-small {
+      font-size: 22px;
+    }
+}
+
+h2{
+	font-size: 21px;
+	font-family: $font-thin;
+	@include bp-small {
+      font-size: 15px;
+    }
+}
+
+h3{
+	font-size: 16px;
+	@include bp-small {
+      font-size: 14px;
+    }
+	
+}
+
+h4{
+	font-size: 18px;
+	@include bp-small {
+      font-size: 15px;
+    }
+}
+/*****************************
+
+		Modal
+******************************/
+
+.modal-content{
+	background: $blue-dark;
+	.modal-title{
+		text-align: center;
+	}
+	.modal-body{
+		font-size: 80%;
+	}
+}
+.modal-backdrop.in {
+//	opacity: 0.9;
+}
+.modal-terminos-txt{
+	ul{
+		padding-left: 25px;
+	}
+	p{
+		padding-bottom: 7px;
+		strong{
+			font-family: $font-medium;
+		}
+	}
+
+}
+/*****************************
+
+		Sponsors
+
+******************************/
+
+#ourSponsors{
+	ul{
+		height: 400px;
+		margin-top: 20px;
+		li{
+			img{
+				width: 100%;
+			}
+		}
+	}
+}
+
+/*****************************
+
+		footer
+
+******************************/
+#mainFooter{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width: 100%;
+	height: 50px;
+	a:hover{
+		color: $white;
+	}
+	@include bp-small {
+    	height: 130px;
+    }
+    ul{
+    	width: 220px;
+    	display: block;
+    	margin: 0px auto 20px;
+    	float: left;
+    	img{
+    		width: 100%;
+    	}
+    	@include bp-small {
+    		float: none;
+    		clear: both;
+    		width: 160px;
+    		
+    	}
+    }
+
+}
+
+.logo-deltaAm{
+	//float: left;
+	max-width: 370px;
+	padding: 10px 0;
+	display: block;
+	margin: 0 auto;
+	@include bp-small {
+     margin: 5px auto;
+     padding: 10px 0 0;
+     display: block;
+     width: 280px;
+    }
+}
+.footer-info{
+	font-size: 70%;
+	line-height: 120%;
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	a{
+		text-decoration: underline;
+	}
+	@include bp-small {
+		width: 100%;
+     	p{	
+     		font-size: 10px;
+     		text-align: center;
+     		display: block;
+     		clear: both;
+     	}
+    }
+}
+
+/*****************************
+
+		extras
+
+******************************/
+
+.hide{
+	display: none;
+
+}
+
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  iframe, object, embed, video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+
+body {
+	overflow: hidden;
+}
+
+/* Preloader */
+#preloader {
+	position: relative;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	//background-color:#fff; /* change if the mask should be a color other than white */
+	z-index:99; /* makes sure it stays on top */
+	padding-top: 50px;
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally on the screen */
+	top:50%; /* centers the loading animation vertically on the screen */
+	background-image:url(../../images/status.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
