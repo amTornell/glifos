@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"><!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Glyphos aeromexico</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="http://vuela.aeromexico.com/favicon.ico">
+    <script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+
+  <header>
+    <a href="" class="aeromexico-logo">
+      <img src="../images/caballero.svg" alt="logo" />
+    </a>
+    
+    <div class="social">
+      <p>
+          <a href="https://www.facebook.com/Aeromexico" target="_blank"><img alt="fb" src="https://gallery.mailchimp.com/1af3cc4b131178248fd7a785f/images/c689d513-9b1c-4150-b52d-cb388a8c9614.png">
+          </a>
+          <a href="https://twitter.com/aeromexico" target="_blank"><img alt="tw" src="https://gallery.mailchimp.com/1af3cc4b131178248fd7a785f/images/4d5c9dff-8ea8-48d6-b818-ad2219b5c8fe.png">
+          </a>
+          <a href="https://www.youtube.com/user/AeromexicoTV" target="_blank"><img alt="yt" src="https://gallery.mailchimp.com/1af3cc4b131178248fd7a785f/images/85fce281-eda8-4e1b-8aca-ac3fe613f375.png">
+          </a>
+          <a href="https://www.linkedin.com/company/aeromexico"  target="_blank"><img alt="linkedin" src="https://gallery.mailchimp.com/1af3cc4b131178248fd7a785f/images/59ea2167-8437-47c3-abdc-2ab5ffdd63c1.png">
+          </a>
+          <a href="https://instagram.com/aeromexico/" target="_blank"><img alt="instagram" src="https://gallery.mailchimp.com/1af3cc4b131178248fd7a785f/images/e6df68cd-d765-4a7f-a865-aafb1317a399.png">
+          </a>
+      </p>
+    </div>
+    <nav>
+      <a href="">Home</a>
+      <a href="#animatedModal" id="btn-mecanica">Dinámica</a>
+      <a href="">Quetzalcóatl</a>
+      <a href="">Mapa</a>
+    </nav>
+  </header>
+
+<div class="main-image text-centered">
+  <img src="../images/quetzal.png" alt="Quetzalcoatl">
+</div>
+<h1 class="text-centered">Quetzalcóatl</h1>
+
+      <div class="main">
+          <div class="grid">
+            <div class="grid-sizer"></div>
+            <div class="grid-item grid-item--width2 grid-item--height2"></div>
+            <div class="grid-item grid-item--width2 grid-item--height2"></div>
+            <div class="grid-item grid-item--height3"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item grid-item--width3"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item grid-item--width2 grid-item--height3"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item grid-item--width2 grid-item--height2"></div>
+            <div class="grid-item grid-item--width2"></div>
+            <div class="grid-item grid-item--height2"></div>
+          
+          </div>
+      </div>
+
+      <footer>
+        <p class="text-centered">
+          &copy; 2016 Aeroméxico. Todos los derechos reservados. Consulta nuestro <a href="https://aeromexico.com/es/viaja-con-aeromexico/preparando-tu-viaje/reglamentos-y-politicas/aviso-de-privacidad/?site=mx" target="_blank">aviso de privacidad</a>.
+        </p>
+      </footer>
+
+   <!--DEMO01-->
+    <div id="animatedModal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+        <div class="close-animatedModal"> 
+            <div id="closebt-container" class="close-lightSpeedIn">
+                <img class="closebt" src="../images/closebt.svg">
+            </div>
+        </div>
+            
+        <div class="modal-content">
+          <h2>Mecánica</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quod autem perspiciatis suscipit expedita ipsum libero adipisci sint! Iusto dignissimos quod hic totam dicta commodi, iure, numquam quia tempora sapiente.</p>
+                  <!--Your modal content goes here-->
+        </div>
+</div>
+
+
+  <!-- scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/animatedModal.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+      $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
+      });
+      $("#btn-mecanica").animatedModal();
+  </script>
+</body>
+</html>

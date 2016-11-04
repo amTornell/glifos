@@ -1,14 +1,12 @@
 body{
 	font-family: $font-base;
-	//font-family: "Neue Haas Unica W01 Regular";
-    background: $blue-dark;
-    color: $white;
+    background: $white;
+    color: $blue-dark;
     height: 100%;
     min-height: 100%;
     margin: 0;
     padding: 0;
     line-height: 1.46;
-  	background: $blue-dark ; 
 }
 
 html {
@@ -19,6 +17,7 @@ html {
 a{
 	text-decoration: none;
 	color: $white;
+
 	&:hover{
 		color: $acento;
 	}
@@ -26,15 +25,6 @@ a{
 
 .left{
 	float: left;
-}
-.contenedor-center {
-  /*  display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
-    align-items: center;
-    */
 }
 
 #the-wrapper{
@@ -65,13 +55,22 @@ a{
 	header
 
 ******************/
-
+.aeromexico-logo{
+	width: 50px;
+	display: block;
+	padding: 10px;
+	float: left;
+	img{
+		width: 100%;
+	}
+}
 header{
 	width: 100%;
 	position: relative;
-	min-height: 100px;
-	margin-top: 20px;
-	background: url('../../images/simulador_menu01.png') no-repeat top center;
+	min-height: 50px;
+	background: $blue-dark;
+	clear: both;
+	overflow: hidden;
 	@include bp-small {
 		background: $blue-dark;
     }
@@ -105,24 +104,25 @@ header{
     }
 }
 
+.eyecatcher{
+	background: url(../../images/main.jpg) no-repeat top center / 100% auto;
+	@media only screen and (min-width : 900px) {
+		min-height: 600px;
+	}
+}
+
 small{
 	font-size: 70%;
 }
+
 .menu{
 	height: 76px;
 	margin: 0 auto;
 	width: 100%;
 	position: relative;
-  	background-image:url('../../images/simulador_menu02.png');
-  	background-repeat: no-repeat;
-  	background-position:  bottom center;
 	ul{
 		position: relative;
-		width: 700px;
-		display: block;
-		background:url('../../images/mayan_menu.png') no-repeat center top;
-		height: 40px;
-		margin: 30px auto 0;
+	
 	}
 	li{
 		display: block;
@@ -136,79 +136,15 @@ small{
 			line-height: 35px;
 			text-align: center;
 			font-family: $font-regular;
-			text-shadow: 1px 1px 1px $cafe;
 			&:hover{
 				text-decoration: none;
 				color: $white;
 			}
 		}
 	}
-	li.profile{
-		span{
-			float: left;
-			.points{
-				font-family: $font-thin;
-				color: $acento;
-			}
-		}
-		a{
-			float: left;
-			width: 100%;
-		}
-		.logout{
-			text-transform: uppercase;
-			font-size: 11px;
-			background: $acento;
-			border: 3px;
-			padding: 0px 5px;
-			height: 20px;
-			line-height: 20px;
-			width: 70px;
-			text-shadow: none;
-			font-family: $font-medium;
-		}
-	}
-	
 }
 
-.profile-mobile{
-	position: absolute;
-	right: 5px;
-	top:60px;
-	width: 140px;
-	display: none;
-	@include bp-small {
-		display: block;
-	}
-		span{
-			float: left;
-			.points{
-				font-family: $font-thin;
-				color: $acento;
-			}
-		}
-		a{
-			float: left;
-			width: 100%;
-		}
-		.logout{
-			text-transform: uppercase;
-			font-size: 11px;
-			background: $acento;
-			border: 3px;
-			padding: 0px 5px;
-			height: 20px;
-			line-height: 20px;
-			width: 70px;
-			text-shadow: none;
-			font-family: $font-medium;
-			display: block;
-			text-align: center;
-			&:hover{
 
-			}
-		}
-	}
 .logo{
 		position: relative;
 		margin: 0px auto 0;
@@ -229,124 +165,55 @@ small{
 		 }
 }
 
+nav{
+	float: right;
+	padding-right: 20px;
+	max-width: 500px;
+	height: 50px;
+	a{
+		line-height: 50px;
+		text-transform: uppercase;
+		padding: 0 0 0 40px;
+		display: block;
+		float: left;
+		font-size: 12px;
+		font-family: $font-medium;
+		&:hover{
+			color: $white;
+		}
+	}
+}
+
+footer{
+	padding: 50px 0 35px;
+	p{
+		font-size: 0.8rem;
+	}
+	a{
+		color: $base;
+	}
+}
+/*******************************************
+		social
+
+**********************************************/
+
+.social{
+	float: left;
+	padding-top: 5px;
+	li{
+		display: block;
+		float: left;
+		img{
+			width: 55px;
+		}
+	}
+}
+
 /*******************************************
 		menu mobile
 
 **********************************************/
-
-/****** nav ******/
-#nav-trigger {
-  display: none;
-  text-align: center; 
-  clear: both;
-  margin-top: 5px;
-  float: left;	
-  position: relative;
-  z-index: 20;	
-
-
-	span {
-	    display: block;
-	    background-color: none;		
-	    color: white;
-	    cursor: pointer;
-	    text-transform: uppercase;
-	    clear: both;
-	    margin: 0;
-	    margin-left: 5px;
-	   	font-size: 18px;
-		letter-spacing: 1px;
-		border: 3px solid $white;
-	    border-radius: 50%;
-		width: 45px;
-  		height: 45px;
-		line-height: 40px;
-	
-		&:hover {
-      	//background-color:  $blue-dark; 
-      	}
-      
-      	
-	  }
-	span:after {
-	
-  	}
-  	span.open:after {
-
-  	}
-
-}
- 
-nav#nav-mobile {
-  position: relative;
-  display: none; 
-  clear: both;
-  z-index: 10;
-  width: 300px;
-  top: -22px;
-  z-index: 10;
-	 ul {
-	    display: none;
-	    list-style-type: none;
-	    position: relative;
-	    left: 0;
-	    right: 0;
-	    margin-left: auto;
-	    margin-right: auto;
-	    text-align: center;
-	    width: 80%;
-	    height: 200px;
-	    padding-top: 20px;
-		li {
-			    display: block;
-			    padding: 2px 0;
-			    margin: 0 2px;
-			    border-bottom: solid 1px $acento;
-			    border-top: solid 1px $blue-medium;
-		}
-		li:first-child{
-			border-top: none;
-		}
-		li:last-child {
-	    	  border-bottom: none; 
-	    }
-	     a {
-		    display: block;
-		    color: $white;
-		    padding: 5px; 
-		    font-size: 15px;
-		    font-family: $font-regular;
-			&:hover{
-				color: #fff; 
-				text-decoration: none;
-			}
-		}
-		li.logo{
-			display: none;
-		}
-	}// ul
-}
-
-/* =Media Queries
--------------------------------------------------------------- */
-@media all and (max-width: 1120px) {
-  #nav-trigger {
-    display: block; }
-
-  nav#nav-main {
-     display: none; 
- }
-
-  nav#nav-mobile {
-    display: block; 
-  }
-  .profile-mobile{
-	display: block;
-  }
-}
-
-
-
 
 
 
@@ -354,95 +221,7 @@ nav#nav-mobile {
 user
 
 ***********************************************/
-.user{
-	position: absolute;
-	right: 20px;
-	top: -50px;
-	width: 150px;
-	z-index: 50;
-	a{
-		padding-top: 10px;
-		display: block;
-		&:hover{
-			color: $white;
-			text-decoration: none;
-		}
-	}
-	p{
-		position: relative;
-	}
-	.avatar{
-		border-radius: 50%;
-		height: 100px;
-		width: 100px;
-		display: block;
-		overflow: hidden;
-		border: 3px solid $acento;
-		margin: 0 auto;
-		img{
-			width: 100%;
-		}
-	}
 
-	.points{
-		font-size: $font-size-base;
-		font-weight: bold;
-		position: absolute;
-		top: 5px;
-		left: 100px;
-		padding: 2px;
-		background: $acento;
-		border-radius: 3px;
-	}
-
-
-	.btn-main{
-		width: 100%;
-		min-width: 100%;
-	}
-	@include bp-medium {
-   		//width: 100%;
-   		//width: 100px;
-   		top: 0px;
-   		.avatar{
-   			width: 80px;
-   			height: 80px;
-   		}
-  	}
-}
-
-.user-points-content{
-		text-align: center;
-		height: 30px;
-		border-radius: 5px;
-		border: 3px solid $acento;
-		margin-top: -10px;
-		.points, button{
-			width: 50%;
-			display: block;
-			float: left;
-			text-transform: uppercase;
-			height: 24px;
-			line-height: 24px;
-			background: none;
-			padding: 0;
-			border: 0;
-		}
-		.points{
-			background: $white;
-			color: $acent;
-		}
-}
-
-.container-center{
-	margin: 0 auto;
-	padding-bottom: 420px;
-	background: $blue-dark url('../../images/simulador_footer.png') no-repeat bottom center / 100% auto ; 
-	@include bp-small{
-    padding-bottom: 180px;
-    }
-
-}
 
 .item-centered{
 	display: block;
@@ -473,12 +252,14 @@ p{
 	@include bp-small {
       font-size: 13px;
     }
-
 }
 
 h1{
-	font-size: 24px;
+	font-size: 46px;
 	font-family: $font-medium;
+	padding: 10px 5px;
+	line-height: 110%;
+	color: $blue-dark;
 	@include bp-small {
       font-size: 22px;
     }
@@ -512,7 +293,9 @@ h4{
 ******************************/
 
 .modal-content{
-	background: $blue-dark;
+	//background: $blue-dark;
+	max-width: 500px;
+	margin: 0 auto;
 	.modal-title{
 		text-align: center;
 	}
@@ -535,22 +318,19 @@ h4{
 	}
 
 }
-/*****************************
+#closebt-container{
+	margin-top: 40px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.closebt{
+	cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
 
-		Sponsors
-
-******************************/
-
-#ourSponsors{
-	ul{
-		height: 400px;
-		margin-top: 20px;
-		li{
-			img{
-				width: 100%;
-			}
-		}
-	}
+.closebt:hover {
+    transform: rotate(90deg);
 }
 
 /*****************************
@@ -559,67 +339,9 @@ h4{
 
 ******************************/
 #mainFooter{
-	position:absolute;
-	bottom:0;
-	left:0;
-	width: 100%;
-	height: 50px;
-	a:hover{
-		color: $white;
-	}
-	@include bp-small {
-    	height: 130px;
-    }
-    ul{
-    	width: 220px;
-    	display: block;
-    	margin: 0px auto 20px;
-    	float: left;
-    	img{
-    		width: 100%;
-    	}
-    	@include bp-small {
-    		float: none;
-    		clear: both;
-    		width: 160px;
-    		
-    	}
-    }
 
 }
 
-.logo-deltaAm{
-	//float: left;
-	max-width: 370px;
-	padding: 10px 0;
-	display: block;
-	margin: 0 auto;
-	@include bp-small {
-     margin: 5px auto;
-     padding: 10px 0 0;
-     display: block;
-     width: 280px;
-    }
-}
-.footer-info{
-	font-size: 70%;
-	line-height: 120%;
-	width: 500px;
-	margin: 0 auto;
-	text-align: center;
-	a{
-		text-decoration: underline;
-	}
-	@include bp-small {
-		width: 100%;
-     	p{	
-     		font-size: 10px;
-     		text-align: center;
-     		display: block;
-     		clear: both;
-     	}
-    }
-}
 
 /*****************************
 
@@ -648,12 +370,6 @@ h4{
   }
 }
 
-
-
-
-body {
-	overflow: hidden;
-}
 
 /* Preloader */
 #preloader {

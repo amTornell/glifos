@@ -1,0 +1,744 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=d25a1f4f-4d18-4b4d-bc95-aea571e6a650");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/****
+	TIPOGRAFIA
+****/
+@font-face {
+  font-family: "Neue Haas Unica W01 UltraLight";
+  src: url("../fonts/dfc4afbf-ccfb-494f-9ee0-8bc445d7bea7.eot?#iefix");
+  src: url("../fonts/dfc4afbf-ccfb-494f-9ee0-8bc445d7bea7.eot?#iefix") format("eot"), url("../fonts/c361e26e-4526-46d8-a9f6-c74877ea3bce.woff2") format("woff2"), url("../fonts/ab956d19-7e42-4da4-b0be-7e64d554b081.woff") format("woff"), url("../fonts/eeeae646-c964-4dbb-9269-da8dc83b40f7.ttf") format("truetype"), url("../fonts/3c611b98-8e5e-4813-b686-3e7417601af0.svg#3c611b98-8e5e-4813-b686-3e7417601af0") format("svg"); }
+
+@font-face {
+  font-family: "Neue Haas Unica W01 Thin";
+  src: url("../fonts/ba48202e-b3fb-4d2e-b782-6e50f7f710b9.eot?#iefix");
+  src: url("../fonts/ba48202e-b3fb-4d2e-b782-6e50f7f710b9.eot?#iefix") format("eot"), url("../fonts/89cc27d4-e9bd-43de-ab56-cc7015e1ff7d.woff2") format("woff2"), url("../fonts/ad1cd90c-7793-4c0a-a7ce-4a6122b0e265.woff") format("woff"), url("../fonts/4c5113af-3402-4eb0-8a1e-59b38d4c4dc6.ttf") format("truetype"), url("../fonts/cdab2db0-1eb1-4654-ad89-5a64b95eab50.svg#cdab2db0-1eb1-4654-ad89-5a64b95eab50") format("svg"); }
+
+@font-face {
+  font-family: "Neue Haas Unica W01 Light";
+  src: url("../fonts/001e59a9-197e-4fb1-9e72-cef21b186c03.eot?#iefix");
+  src: url("../fonts/001e59a9-197e-4fb1-9e72-cef21b186c03.eot?#iefix") format("eot"), url("../fonts/e5716290-d41e-4c97-a27c-7a20a46ddf45.woff2") format("woff2"), url("../fonts/b681571f-aab2-4935-a99c-6ee1063ce638.woff") format("woff"), url("../fonts/1d88a9b0-aac0-40df-baf7-a630cd19cc5d.ttf") format("truetype"), url("../fonts/40a247b1-2840-4953-b24b-8a82ace0673b.svg#40a247b1-2840-4953-b24b-8a82ace0673b") format("svg"); }
+
+@font-face {
+  font-family: "Neue Haas Unica W01 Regular";
+  src: url("../fonts/0ebd7648-5847-404a-a88a-28a353c0921c.eot?#iefix");
+  src: url("../fonts/0ebd7648-5847-404a-a88a-28a353c0921c.eot?#iefix") format("eot"), url("../fonts/e0d80810-f7e3-4fea-8c57-ef8116f0465d.woff2") format("woff2"), url("../fonts/27645c8a-608b-4abf-a2f1-c4407b576723.woff") format("woff"), url("../fonts/bd3b3439-8eff-445c-80ed-87064138ca7d.ttf") format("truetype"), url("../fonts/bf3731ee-64fe-49c1-b8a6-a4edbff3c74a.svg#bf3731ee-64fe-49c1-b8a6-a4edbff3c74a") format("svg"); }
+
+@font-face {
+  font-family: "Neue Haas Unica W01 Medium It";
+  src: url("../fonts/56b738a7-54b9-4e8c-a470-d96972ab3303.eot?#iefix");
+  src: url("../fonts/56b738a7-54b9-4e8c-a470-d96972ab3303.eot?#iefix") format("eot"), url("../fonts/2418a824-3af2-42d7-a62e-f7a77cf487d1.woff2") format("woff2"), url("../fonts/86b76db5-9343-473a-a106-60683cec7626.woff") format("woff"), url("../fonts/2b883332-01dc-4b55-ac6a-d24c84f0e334.ttf") format("truetype"), url("../fonts/7de50dd1-4a4e-47bf-bb5d-33bf1450649a.svg#7de50dd1-4a4e-47bf-bb5d-33bf1450649a") format("svg"); }
+
+/*******************
+********************
+	Media queries
+		EJEMPLO
+.sidebar {
+  width: 60%;
+  float: left;
+  margin: 0 2% 0 0;
+  @include bp-small {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}
+
+*******************/
+/************************
+**************************
+	Transitions
+	EJEMPLO
+a {
+  color: gray;
+  @include transition(color .3s ease);
+  &:hover {
+    color: black;
+  }
+}
+
+*****************************/
+/************************
+**************************
+	Visually hide an element
+http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+*****************************/
+.visually-hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+body {
+  font-family: "Neue Haas Unica W01 Regular", "Arial", "Helvetica", sans-serif;
+  background: #fff;
+  color: #192F51;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.46; }
+
+html {
+  height: 100%; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+  a:hover {
+    color: #192F51; }
+
+.left {
+  float: left; }
+
+#the-wrapper {
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 10; }
+
+.row {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.responsive-image {
+  width: 100%; }
+
+.super-image {
+  padding: 20px 0; }
+
+.float-right {
+  float: right; }
+
+.text-centered {
+  text-align: center; }
+
+/*****************
+	header
+
+******************/
+.aeromexico-logo {
+  width: 50px;
+  display: block;
+  padding: 10px;
+  float: left; }
+  .aeromexico-logo img {
+    width: 100%; }
+
+header {
+  width: 100%;
+  position: relative;
+  min-height: 50px;
+  background: #192F51;
+  clear: both;
+  overflow: hidden; }
+  @media only screen and (max-width: 30em) {
+    header {
+      background: #192F51; } }
+  header .languages {
+    width: 80px;
+    position: absolute;
+    top: 1px;
+    right: 2px; }
+    header .languages li {
+      display: inline-block;
+      border-top: 3px solid #192F51;
+      font-size: 18px; }
+      header .languages li a {
+        font-family: "Neue Haas Unica W01 Thin"; }
+        header .languages li a:hover {
+          text-decoration: none; }
+    header .languages li.active {
+      border-color: #192F51; }
+    @media only screen and (max-width: 30em) {
+      header .languages {
+        position: relative;
+        margin: 0 auto;
+        width: 66px; }
+        header .languages li {
+          font-size: 13px; } }
+
+.eyecatcher {
+  background: url(../../images/main.jpg) no-repeat top center/100% auto; }
+  @media only screen and (min-width: 900px) {
+    .eyecatcher {
+      min-height: 600px; } }
+
+small {
+  font-size: 70%; }
+
+.menu {
+  height: 76px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative; }
+  .menu ul {
+    position: relative; }
+  .menu li {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 40px;
+    line-height: 35px; }
+    .menu li a {
+      display: block;
+      width: 100%;
+      line-height: 35px;
+      text-align: center;
+      font-family: "Neue Haas Unica W01 Regular"; }
+      .menu li a:hover {
+        text-decoration: none;
+        color: #fff; }
+
+.logo {
+  position: relative;
+  margin: 0px auto 0;
+  display: block;
+  max-width: 400px; }
+  .logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; }
+  @media screen and (min-width: 300px) and (max-width: 800px) {
+    .logo {
+      max-width: 290px; } }
+
+nav {
+  float: right;
+  padding-right: 20px;
+  max-width: 500px;
+  height: 50px; }
+  nav a {
+    line-height: 50px;
+    text-transform: uppercase;
+    padding: 0 0 0 40px;
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-family: "Neue Haas Unica W01 Medium It"; }
+    nav a:hover {
+      color: #fff; }
+
+footer {
+  padding: 50px 0 35px; }
+  footer p {
+    font-size: 0.8rem; }
+  footer a {
+    color: #333; }
+
+/*******************************************
+		social
+
+**********************************************/
+.social {
+  float: left;
+  padding-top: 5px; }
+  .social li {
+    display: block;
+    float: left; }
+    .social li img {
+      width: 55px; }
+
+/*******************************************
+		menu mobile
+
+**********************************************/
+/****************
+user
+
+***********************************************/
+.item-centered {
+  display: block;
+  margin: 0 auto;
+  float: none; }
+
+/*****************************
+
+		TEXTOS
+
+******************************/
+.main-title {
+  margin: 10px 0;
+  text-align: center;
+  font-family: "Neue Haas Unica W01 Thin"; }
+  .main-title span {
+    color: #192F51; }
+
+.text-centered {
+  text-align: center; }
+
+@media only screen and (max-width: 30em) {
+  p {
+    font-size: 13px; } }
+
+h1 {
+  font-size: 46px;
+  font-family: "Neue Haas Unica W01 Medium It";
+  padding: 10px 5px;
+  line-height: 110%;
+  color: #192F51; }
+  @media only screen and (max-width: 30em) {
+    h1 {
+      font-size: 22px; } }
+
+h2 {
+  font-size: 21px;
+  font-family: "Neue Haas Unica W01 Thin"; }
+  @media only screen and (max-width: 30em) {
+    h2 {
+      font-size: 15px; } }
+
+h3 {
+  font-size: 16px; }
+  @media only screen and (max-width: 30em) {
+    h3 {
+      font-size: 14px; } }
+
+h4 {
+  font-size: 18px; }
+  @media only screen and (max-width: 30em) {
+    h4 {
+      font-size: 15px; } }
+
+/*****************************
+
+		Modal
+******************************/
+.modal-content {
+  max-width: 500px;
+  margin: 0 auto; }
+  .modal-content .modal-title {
+    text-align: center; }
+  .modal-content .modal-body {
+    font-size: 80%; }
+
+.modal-terminos-txt ul {
+  padding-left: 25px; }
+
+.modal-terminos-txt p {
+  padding-bottom: 7px; }
+  .modal-terminos-txt p strong {
+    font-family: "Neue Haas Unica W01 Medium It"; }
+
+#closebt-container {
+  margin-top: 40px;
+  position: relative;
+  text-align: center;
+  width: 100%; }
+
+.closebt {
+  cursor: pointer;
+  transition: all 0.2s ease 0s; }
+
+.closebt:hover {
+  transform: rotate(90deg); }
+
+/*****************************
+
+		footer
+
+******************************/
+/*****************************
+
+		extras
+
+******************************/
+.hide {
+  display: none; }
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%; }
+  .embed-container iframe, .embed-container object, .embed-container embed, .embed-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/* Preloader */
+#preloader {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  /* makes sure it stays on top */
+  padding-top: 50px; }
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally on the screen */
+  top: 50%;
+  /* centers the loading animation vertically on the screen */
+  background-image: url(../../images/status.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */ }
+
+.btn-main {
+  background-color: rgba(9, 16, 37, 0.7);
+  border: 1px solid #FFFFFF;
+  min-width: 200px;
+  padding: 15px;
+  letter-spacing: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 50px;
+  text-transform: uppercase;
+  cursor: pointer; }
+  @media only screen and (max-width: 30em) {
+    .btn-main {
+      display: block;
+      margin: 10px auto; } }
+  .btn-main:hover {
+    background-color: rgba(9, 16, 37, 0.7);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    text-decoration: none; }
+  .btn-main:before {
+    position: absolute;
+    height: 100%;
+    font-size: 125%;
+    line-height: 3.5;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    left: 70%;
+    opacity: 0;
+    top: -2.5px; }
+  .btn-main:hover:before {
+    left: 85%;
+    opacity: 1; }
+  .btn-main span {
+    font-family: Arial, Helvetica;
+    letter-spacing: 1px; }
+
+.link-basic:hover {
+  color: #192F51; }
+
+.social-icon {
+  float: left;
+  height: 20px;
+  padding-left: 10%; }
+
+.close {
+  color: #fff;
+  opacity: 1; }
+
+#btn-logout {
+  background: #192F51;
+  font-size: 12px;
+  border: 0;
+  border-radius: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  left: 100px;
+  bottom: 0px;
+  z-index: 55; }
+  @media only screen and (max-width: 30em) {
+    #btn-logout {
+      font-size: 10px; } }
+
+.button-share {
+  text-align: center; }
+  .button-share .btn-main {
+    height: 50px;
+    padding: 5px 15px;
+    line-height: 35px; }
+  .button-share .social-icon {
+    margin-top: 7px;
+    padding-right: 10px; }
+
+.og-grid {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%; }
+  .og-grid li {
+    display: inline-block;
+    margin: 10px 5px 0 5px;
+    vertical-align: top;
+    height: 200px;
+    width: 100%/4; }
+    .og-grid li > a {
+      border: none;
+      outline: none;
+      display: block;
+      position: relative; }
+      .og-grid li > a img {
+        border: none;
+        outline: none;
+        display: block;
+        position: relative;
+        width: 200px; }
+    .og-grid li.og-expanded > a::after {
+      top: auto;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-bottom-color: #192F51;
+      border-width: 15px;
+      left: 50%;
+      margin: -20px 0 0 -15px; }
+
+.og-expander {
+  position: absolute;
+  background: #192F51;
+  top: auto;
+  left: 0;
+  width: 100%;
+  margin-top: 10px;
+  text-align: left;
+  height: 0;
+  overflow: hidden; }
+
+.og-expander-inner {
+  padding: 50px 30px;
+  height: 100%; }
+
+.og-close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer; }
+  .og-close::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    background: #888;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .og-close::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    background: #888;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .og-close:hover::before, .og-close:hover::after {
+    background: #333; }
+
+.og-fullimg {
+  width: 50%;
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.og-details {
+  width: 50%;
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0 40px 0 20px; }
+
+.og-fullimg {
+  text-align: center; }
+  .og-fullimg img {
+    display: inline-block;
+    max-height: 100%;
+    max-width: 100%; }
+
+.og-details h3 {
+  font-weight: 300;
+  font-size: 52px;
+  padding: 40px 0 10px;
+  margin-bottom: 10px;
+  color: #fff; }
+
+.og-details h4 {
+  color: #fff;
+  font-weight: bold; }
+
+.og-details p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #c9c9c9; }
+
+.og-details a {
+  font-weight: 700;
+  font-size: 16px;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  border: 3px solid #333;
+  display: inline-block;
+  margin: 30px 0 0;
+  outline: none; }
+  .og-details a::before {
+    content: '\2192';
+    display: inline-block;
+    margin-right: 10px; }
+  .og-details a:hover {
+    border-color: #999;
+    color: #999; }
+
+.og-loading {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ddd;
+  box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  -webkit-animation: loader 0.5s infinite ease-in-out both;
+  -moz-animation: loader 0.5s infinite ease-in-out both;
+  animation: loader 0.5s infinite ease-in-out both; }
+
+@-webkit-keyframes loader {
+  0% {
+    background: #ddd; }
+  33% {
+    background: #ccc;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+  66% {
+    background: #ccc;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; } }
+
+@-moz-keyframes loader {
+  0% {
+    background: #ddd; }
+  33% {
+    background: #ccc;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+  66% {
+    background: #ccc;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; } }
+
+@keyframes loader {
+  0% {
+    background: #ddd; }
+  33% {
+    background: #ccc;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+  66% {
+    background: #ccc;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; } }
+
+@media screen and (max-width: 830px) {
+  .og-expander h3 {
+    font-size: 32px; }
+  .og-expander p {
+    font-size: 13px; }
+  .og-expander a {
+    font-size: 12px; } }
+
+@media screen and (max-width: 650px) {
+  .og-fullimg {
+    display: none; }
+  .og-details {
+    float: none;
+    width: 100%; } }
+
+/****************************
+
+MASONRY
+
+
+*****************************/
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* ---- grid-item ---- */
+.grid-sizer,
+.grid-item {
+  width: 20%; }
+
+.grid-item {
+  height: 300px;
+  float: left;
+  background: #D26;
+  border: 2px solid #333;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px; }
+
+.grid-item--width2 {
+  width: 40%; }
+
+.grid-item--width3 {
+  width: 60%; }
+
+.grid-item--height2 {
+  height: 500px; }
+
+.grid-item--height3 {
+  height: 560px; }
+
+.grid-item--height4 {
+  height: 860px; }
