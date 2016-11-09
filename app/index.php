@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
     <?php require("includes/head.html");?>
-    <title>Glyphos aeromexico</title>
+        <title>Un viaje por nuestras raíces</title>
+
 </head>
 <body>
 
