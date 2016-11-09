@@ -45,6 +45,25 @@ a{
 .super-image{
 	padding: 20px 0;
 }
+.desktop-img{
+    @include bp-small {
+		display: none;
+    }
+}
+
+.logo-quetzal-mobile{
+	max-width: 320px;
+	margin: 0 auto;
+}
+
+.mobile-img{
+	display: none;
+    @include bp-small {
+		
+		display: block;
+    }
+}
+
 .float-right{
 	float: right;
 }
@@ -58,7 +77,7 @@ a{
 .aeromexico-logo{
 	width: 50px;
 	display: block;
-	padding: 10px;
+	padding: 10px 10px 0;
 	float: left;
 	img{
 		width: 100%;
@@ -168,20 +187,39 @@ small{
 nav{
 	float: right;
 	padding-right: 20px;
-	max-width: 500px;
+	max-width: 600px;
 	height: 50px;
 	a{
 		line-height: 50px;
 		text-transform: uppercase;
-		padding: 0 0 0 40px;
+		padding: 0 10px 0px;
 		display: block;
 		float: left;
 		font-size: 12px;
 		font-family: $font-medium;
 		&:hover{
+			color: $blue-light;
+		}
+	}
+	a.participa{
+		background: $blue-light;
+		&:hover{
 			color: $white;
 		}
 	}
+	@include bp-medium{
+		max-width: 385px;
+		padding-right: 5px;
+		//float: left;
+		a{
+			font-size: 10px;
+			padding: 0px 5px;
+		}
+    }
+	@include bp-small {
+		width: 100%;
+		
+    }
 }
 
 footer{
@@ -191,6 +229,7 @@ footer{
 	}
 	a{
 		color: $base;
+		text-decoration: underline;
 	}
 }
 /*******************************************
@@ -260,8 +299,10 @@ h1{
 	padding: 10px 5px;
 	line-height: 110%;
 	color: $blue-dark;
+	padding-bottom: 20px;
 	@include bp-small {
       font-size: 22px;
+      padding-bottom: 10px;
     }
 }
 
@@ -394,3 +435,36 @@ h4{
 	background-position:center;
 	margin:-100px 0 0 -100px; /* is width and height divided by two */
 }
+
+
+
+.animatedModal-on{
+	background: $blue-dark !important;
+	color: $white !important;
+}
+.modal-content{
+	position: relative;
+	h2{
+		padding: 20px 0;
+		text-align: center;
+		font-size: 30px;
+	}
+	h3{
+		font-size: 22px;
+		line-height: 120%;
+		font-family: $font-medium;
+		padding: 0 10px 10px;
+	}
+	p{
+		padding: 0 10px 10px;
+	}
+}
+ol.dinamica{
+	padding: 20px 20px 20px 50px;
+	li{
+		padding: 10px;
+		list-style: ideograph-numeric;
+	}
+}
+
+
